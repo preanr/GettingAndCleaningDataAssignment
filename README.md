@@ -24,3 +24,10 @@ Then the variables (columns) that are required are filtered using regular expres
 2. When selected the mean and standard deviation variables, mean(), std() and meanFreq() were included and angle() between mean/std vectors where not. This is since meanFreq() is defined as a mean, and the angle between mean/std vectors are not strictly means or standard deviations.
 3. Regarding the selction of meaningful variable names, it was decided that using the variable names from the original data set made more sense than making longer names that did not neccessarily add value. For example, "tBodyGyro-mean()-Y" conveys that this variable is the Y component of the time domain mean of the Angular Velocity from the Gyroscope; The alternative would be to name the variable along the lines of "y_direction_time_domain_Body_Angular_Velocity_mean" - which in my opinion is overly long. The details behind each variable name are available in the codebook.
 
+# Retreiving the data file
+The following code snippet can be used to read in the summarized data set
+```R
+final_summarized_dataset <- read.table("summarized_UCI_HAR_Dataset.txt", header = TRUE)
+```
+
+
