@@ -23,4 +23,4 @@ The data was separated in a few files viz. the Test, Training and General. The t
 The approach taken was to read in all of the x-axis data (test and train) and then merge that into an x-axis dataset (using rbind), then read in the test and train y-axis data and merge these as well (again using rbind). This merged y-axis set is then joined to the activity labels data set to get the full activity names.
 The subject data for test and train is also merged (once again rbind).
 The subject, activity and x-axis data is then merged to create the total data set (this time using cbind).
-Then the variables (columns) that are required are filtered using regular expressions.
+Then the variables (columns) that are required are filtered using regular expressions.(Please note all variables that calculate a mean or standard deviation are included, however the angle between mean or standard deviation vectors are excluded.)
