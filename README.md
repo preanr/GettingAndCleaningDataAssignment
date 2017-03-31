@@ -2,11 +2,17 @@
 
 # Introduction
 The task for this project was to process the human activity recognition (HAR) data from the UCI repository into a tidy dataset that satisfied the following conditions (from the assignment question itself): 
+
   (1) Merges the training and the test sets to create one data set.
+  
   (2) Extracts only the measurements on the mean and standard deviation for each measurement.
+  
   (3) Uses descriptive activity names to name the activities in the data set
+  
   (4) Appropriately labels the data set with descriptive variable names.
+  
   (5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+  
 
 # Overview of the data
 A simplified overview of the data is as follows: A group of test subjects was outfitted with a smart phone that was tethered to their body; The smart phone was able to record their movement via an accelerometer and gyroscope while they performed 6 different activities. The data from the accelerometer and gyroscope as well as the test subject and actvity constitute the data set.
