@@ -13,6 +13,7 @@ A simplified overview of the data is as follows: A group of test subjects was ou
 
 # Approach
 The data was separated in a few files viz. the Test, Training and General. The test and training sets contained X-axis data, y-axis data and subject as well as some inertial data used to feed the test or train set. (For the purpose of this project, the intertial data is not required - only the highler level test and train data sets are considered). The general folder contains the column headers for the x-axis data and the activity names that correspond to the y-axis data in the test and train folders.
+
 The approach taken was to read in all of the x-axis data (test and train) and then merge that into an x-axis dataset (using rbind), then read in the test and train y-axis data and merge these as well (again using rbind). This merged y-axis set is then joined to the activity labels data set to get the full activity names.
 The subject data for test and train is also merged (once again rbind).
 The subject, activity and x-axis data is then merged to create the total data set (this time using cbind).
