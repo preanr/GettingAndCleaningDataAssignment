@@ -24,3 +24,8 @@ The approach taken was to read in all of the x-axis data (test and train) and th
 The subject data for test and train is also merged (once again rbind).
 The subject, activity and x-axis data is then merged to create the total data set (this time using cbind).
 Then the variables (columns) that are required are filtered using regular expressions.(Please note all variables that calculate a mean or standard deviation are included, however the angle between mean or standard deviation vectors are excluded.)
+
+# Important Considerations
+1. When selected the mean and standard deviation variables, meanFreq() was included and angle() between mean/std vectors where not. 
+2. Regarding the selction of meaningful variable names, it was decided that using the variable names from the original data set made more sense than making longer names that did not neccessarily add value. The details behind each variable name are available in the codebook.
+
