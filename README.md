@@ -31,7 +31,7 @@ The approach taken was as follows:
 ## Retreiving the data file
 The following code snippet can be used to read in the summarized data set
 ```R
-url <- "https://cdn.rawgit.com/preanr/GettingAndCleaningDataAssignment/c5299b41/summaryDS.txt"
+url <- "https://cdn.rawgit.com/preanr/GettingAndCleaningDataAssignment/78d55bec/summaryDS.txt"
 final_summarized_dataset <- read.table(url, header=TRUE, sep="\t")
 ```
 ## Conclusion
