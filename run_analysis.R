@@ -56,9 +56,7 @@ run_analysis <- function(){
         
         ##filter dataset so that only mean and std deviation variables are included
         ##please note: the "mean|std" expression is used since it captures the 
-        ##mean and std deviations and excludes the angle
-        ##(the +2 at the end accounts for the subject_id and activity name which is
-        ## not in the feature list)
+        ##mean and std deviations and excludes the angle       
         df_x_filtered <- df_x[, grep("mean|std", featureNames$feature_name)]
         
         ##remove parentheses from variable names - to be more R friendly
