@@ -38,6 +38,6 @@ final_summarized_dataset <- read.table(url, header=TRUE, sep="\t")
 The data was collected and processed as required. The separate data files were merged to form a single complete data set and then summarized as required.
 
 The resulting data set satisfies the conditions for tidy for the following reasons:
-1. Each variable is a column
+1. Each variable is a column - this was carried over from the initial data set.
 2. Each observation (a single subject performing a single task) forms a row
 3. Each type of obsevational unit forms a table.
