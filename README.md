@@ -14,12 +14,13 @@ A simplified overview of the data is as follows: A group of test subjects was ou
 ## Approach
 The data was separated in a few files viz. the Test, Training and General. The test and training sets contained X-axis data, y-axis data and subject as well as some inertial data used to feed the test or train set. (For the purpose of this project, the intertial data is not required - only the highler level test and train data sets are considered). The general folder contains the column headers for the x-axis data and the activity names that correspond to the y-axis data in the test and train folders.
 
-The approach taken was to read in all of the x-axis data (test and train) and then merge that into an x-axis dataset (using rbind), then read in the test and train y-axis data and merge these as well (again using rbind). This merged y-axis set is then joined to the activity labels data set to get the full activity names.
-The subject data for test and train is also merged (once again rbind).
-Then the x-axis variables (columns) that are required are filtered using regular expressions.(Please note all variables that calculate a mean or standard deviation are included, however the angle between mean or standard deviation vectors are excluded.)
-These variable names are then modified to be more R friendly (i.e. removal of parentheses and replacement of "-" with ".").
-The subject, activity and x-axis data is then merged to create the total data set (this time using cbind).
-Finally, the data is grouped by the activity and subject and summarized using the average (Please note after this step the column names are updated to indicate that this data set contains Averages of each variable.
+The approach taken was as follows: 
+1. Read in all of the x-axis data (test and train) and then merge that into an x-axis dataset (using rbind), then read in the test and train y-axis data and merge these as well (again using rbind). This merged y-axis set is then joined to the activity labels data set to get the full activity names.
+2. The subject data for test and train is also merged (once again rbind).
+3. Then the x-axis variables (columns) that are required are filtered using regular expressions.(Please note all variables that calculate a mean or standard deviation are included, however the angle between mean or standard deviation vectors are excluded.)
+4. These variable names are then modified to be more R friendly (i.e. removal of parentheses and replacement of "-" with "."). Additionally, there are variables that include the literal "BodyBody"- this was presumed to be an error and changed to "Body"
+5. The subject, activity and x-axis data is then merged to create the total data set (this time using cbind).
+6. Finally, the data is grouped by the activity and subject and summarized using the average (Please note after this step the column names are updated to indicate that this data set contains Averages of each variable.
 
 ## Important Considerations
 1. The code assumes that the data is stored in a sub folder of the working directory named "UCI HAR Dataset"
@@ -34,5 +35,9 @@ url <- "https://cdn.rawgit.com/preanr/GettingAndCleaningDataAssignment/c5299b41/
 final_summarized_dataset <- read.table(url, header=TRUE, sep="\t")
 ```
 ## Conclusion
+The data was collected and processed as required. The separate data files were merged to form a single complete data set and then summarized as required.
 
-
+The resulting data set satisfies the conditions for tidy for the following reasons:
+1. Each variable is a column
+2. Each observation (a single subject performing a single task) forms a row
+3. Each type of obsevational unit forms a table.
