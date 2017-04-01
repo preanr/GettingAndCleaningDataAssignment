@@ -60,6 +60,9 @@ run_analysis <- function(){
         ##(the +2 at the end accounts for the subject_id and activity name which is
         ## not in the feature list)
         df_x_filtered <- df_x[, grep("mean|std", featureNames$feature_name)]
+        
+        ##remove parentheses from variable names - to be more R friendly
+        names(df_x_filtered) <- gsub("[()]","", names(df_x_filtered))
 
         ##merge x and y axis and subject data to form complete data
         df_complete <- cbind(df_subject, df_y, df_x_filtered)
