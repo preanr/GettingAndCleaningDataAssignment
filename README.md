@@ -27,7 +27,8 @@ Then the variables (columns) that are required are filtered using regular expres
 # Retreiving the data file
 The following code snippet can be used to read in the summarized data set
 ```R
-final_summarized_dataset <- read.table("summarized_UCI_HAR_Dataset.txt", header = TRUE)
+url <- "https://cdn.rawgit.com/preanr/GettingAndCleaningDataAssignment/db1e4401/summarized_UCI_HAR_Dataset.txt"
+final_summarized_dataset <- read.table(url, header=TRUE, sep="\t")
 ```
 
 
