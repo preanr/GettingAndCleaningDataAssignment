@@ -63,12 +63,28 @@ run_analysis <- function(){
         
         ##remove parentheses from variable names - to be more R friendly
         names(df_x_filtered) <- gsub("[()]","", names(df_x_filtered))
+        
+        ##replace "-" signs with "."
+        names(df_x_filtered) <- gsub("[-]",".", names(df_x_filtered))
+        
+        ##replace "BodyBody" signs with "Body"
+        names(df_x_filtered) <- gsub("BodyBody","Body", names(df_x_filtered))
 
         ##merge x and y axis and subject data to form complete data
         df_complete <- cbind(df_subject, df_y, df_x_filtered)
         
         ##this step groups the data set by activity name and subject id
+        df_complete <- group_by(df_complete, activity_name, subject_id)
+        
         ##then summarizes each variable using the mean function
-        summarize_each(group_by(df_complete, activity_name, subject_id), funs(mean))
+        df_summary <- summarize_each(df_complete, funs(mean))
+        
+        ##finally update the column names to add in a prefix to indicate that
+        ##each variable represents an average
+        names(df_summary) <- gsub("^t","tAve", names(df_summary))
+        names(df_summary) <- gsub("^f","fAve", names(df_summary))
+        
+        ##return the result
+        df_summary
 }
 
