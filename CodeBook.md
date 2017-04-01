@@ -11,38 +11,22 @@ The following is taken from the variable description from the original dataset
 
 >These signals were used to estimate variables of the feature vector for each pattern: '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
->tBodyAcc-XYZ
-
+>tBodyAcc-XYZ 
 >tGravityAcc-XYZ
-
 >tBodyAccJerk-XYZ
-
 >tBodyGyro-XYZ
-
 >tBodyGyroJerk-XYZ
-
 >tBodyAccMag
-
 >tGravityAccMag
-
 >tBodyAccJerkMag
-
 >tBodyGyroMag
-
 >tBodyGyroJerkMag
-
 >fBodyAcc-XYZ
-
 >fBodyAccJerk-XYZ
-
 >fBodyGyro-XYZ
-
 >fBodyAccMag
-
 >fBodyAccJerkMag
-
 >fBodyGyroMag
-
 >fBodyGyroJerkMag
 
 In the summarized dataset the "-" signs were replaced with "." symbols. (Please refer to the table of variables for the complete variable names)
@@ -50,16 +34,13 @@ In the summarized dataset the "-" signs were replaced with "." symbols. (Please 
 From the set of variables that were estimated from these signals, only the following were included in the summarized dataset: 
 
 >mean(): Mean value
-
 >std(): Standard deviation
-
 >meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-
 
 The activity_name and subject_id variables indicate the task performed and person performing the task respectively.
 
 ### Data Summarizing
-The dataset was grouped by the activity_name and the subject_id. This allowed a summary table to be created by generating the average of each of the varibles included from the original dataset by the activity_name and the subject_id.
+The dataset was grouped by the **activity_name** and the **subject_id**. This allowed a summary table to be created by generating the average of each of the varibles included from the original dataset by the activity_name and the subject_id.
 To deferentiate this from the original set, the word Ave was included after the t or f prefix for each variable.
 
 ## Table of variables
