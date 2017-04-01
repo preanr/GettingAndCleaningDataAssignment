@@ -1,10 +1,11 @@
 |Variable Name    | Description                                           | Type        | Range         |
 |-----------------|-------------------------------------------------------|-------------|---------------|
 |activity_name  |The name of the task performed by the subject  |char | N/A |
-|subject_id | The id for the subject that performed the task  | int | 1-30  |
-
- [3] "tBodyAcc.mean.X"               "tBodyAcc.mean.Y"              
- [5] "tBodyAcc.mean.Z"               "tBodyAcc.std.X"               
+|subject_id | The id for the subject that performed the task  | int | 1:30  |
+|tBodyAcc.mean.X | The time domain mean of the x-component of the acceleration | numeric | -1.0:1.0   |
+|tBodyAcc.mean.Y | The time domain mean of the y-component of the acceleration | numeric | -1.0:1.0   |
+|tBodyAcc.mean.Z | The time domain mean of the z-component of the acceleration | numeric | -1.0:1.0   |               
+|tBodyAcc.std.X  | The time domain standard deviation of the x-component of the acceleration | numeric | -1.0:1.0   |               
  [7] "tBodyAcc.std.Y"                "tBodyAcc.std.Z"               
  [9] "tGravityAcc.mean.X"            "tGravityAcc.mean.Y"           
 [11] "tGravityAcc.mean.Z"            "tGravityAcc.std.X"            
